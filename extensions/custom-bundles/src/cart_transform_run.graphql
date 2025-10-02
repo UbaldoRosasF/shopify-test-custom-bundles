@@ -2,7 +2,10 @@ query CartTransformRunInput {
   cart {
     lines {
       id
-      quantity
+      bundle_key: attribute(key: "bundle_key") { value }
+      bundle_components: attribute(key: "bundle_components") { value }
+      bundle_discount: attribute(key: "bundle_discount") { value }
+      bundle_name: attribute(key: "bundle_name") { value }
     }
   }
 }
